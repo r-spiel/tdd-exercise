@@ -25,10 +25,9 @@ def blackjack_score(hand)
       card = 1
     end
     score += card
-    #if total score is 11 or less & there is an ace ... add 10
   end
 
-  count_of_aces = hand.count('Ace') #I decided to count the Aces and do it this way in case there was more than 1 ace, although in retrospect, I realize that you wouldn't ever add more than 1 extra "10" value... so I could've
+  count_of_aces = hand.count('Ace') #I decided to count the Aces and do it this way in case there was more than 1 ace, although in retrospect, I realize that you wouldn't ever add more than 1 extra "10" value... so I could've just done if hand.include?('Ace') && score <= 11 score += 10 end
 
   count_of_aces.times do
     if score <= 11
